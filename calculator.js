@@ -21,6 +21,9 @@ var calculatorModule = (function(){
    */
 
    module.load= function(x){
+    if(typeof x !== 'number'){
+      throw new Error('Wrong data type!');
+    }
     _total=x;
     return _total;
    };
@@ -40,6 +43,9 @@ var calculatorModule = (function(){
    * @param { Number } x
    */
    module.add= function(x){
+    if(typeof x !== 'number'){
+      throw new Error('Wrong data type!');
+    }
     _total=x+_total;
    };
 
@@ -48,6 +54,9 @@ var calculatorModule = (function(){
    * @param  { Number } x
    */
    module.subtract= function(x){
+   if(typeof x !== 'number'){
+      throw new Error('Wrong data type!');
+    }
     _total=_total-x;
    };
 
@@ -57,6 +66,9 @@ var calculatorModule = (function(){
    * @param  { Number } x
    */
    module.multiply= function(x){
+   if(typeof x !== 'number'){
+      throw new Error('Wrong data type!');
+    }
     _total=x*_total;
    };
 
@@ -65,6 +77,9 @@ var calculatorModule = (function(){
    * @param  { Number } x
    */
    module.divide=function(x){
+    if(typeof x !== 'number'){
+      throw new Error('Wrong data type!');
+    }
     _total=_total/x;
 
    };
@@ -91,9 +106,10 @@ var calculatorModule = (function(){
     _memory=0;
    };
 
-  /**
-   * Validation
-   */
+
+
+
+
 
    return module;
 });
