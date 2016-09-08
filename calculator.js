@@ -80,11 +80,16 @@ var calculatorModule = (function(){
   /**
    * Stores the value of `total` to `memory`
    */
-
+   module.saveMemory=function(){
+    _memory=_total;
+   };
 
   /**
    * Clear the value stored at `memory`
    */
+   module.clearMemory=function(){
+    _memory=0;
+   };
 
   /**
    * Validation
